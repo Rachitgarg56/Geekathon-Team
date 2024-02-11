@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    color: #FFF;
+}
+
+body {
+    background: url("https://images.unsplash.com/photo-1627398362552-6a029c1f583c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.9;
+}
+
+#heading {
+    padding: 1rem 1rem;
+}
+
+#make-board {
+    height: auto;
+    /* width: auto; */
+    display: flex;
+    gap: 1rem;
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+    border: none;
+}
+
+#add-note:hover {
+    cursor: pointer;
+    background-color: beige;
+}
+
+#make-board p {
+    color: black;
+    text-align: center;
+    /* position: absolute; */
+}
+
+.anotherBox {
+    height: 100px;
+    width: 180px;
+    border-radius: 10px;
+    display: none;
+    border: none;
+    /* padding-left: 2rem; */
+}
+
+#title-name {
+    height: 30px;
+    width: 165px;
+    color: black;
+    border: 2px solid #0079BF;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+}
+
+#form {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 0.5rem;
+    background-color: #FFF;
+}
+
+#add-brd {
+    background-color: #0079BF;
+    border: none;
+    padding: 0.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#add-note {
+    height: 50px;
+    width: 180px;
+    color: black;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: #FFF;
+}
+
+#most-inner-box {
+    display: flex;
+    gap: 3rem;
+}
+
+.x-color {
+    color: black;
+    padding-top: 0.5rem;
+}
+
+.actual-height {
+    height: auto;
+}
+
+.all-data {
+    display: flex;
+    gap: 1rem;
+    height: auto;
+}
+
+.show-hide {
+    display: none;
+}
+
+.active {
+    display: block;
+} 
+
+.containerStyle {
+    height: 150px;
+    width: 180px;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 10px;
+    /* overflow-y: scroll; */
+}
+
+.add-cards {
+    color: black;
+    background-color: #0079BF;
+    border-radius: 10px;
+    border: none;
+    padding: 0.5rem;
+    font-weight: 600;
+}
