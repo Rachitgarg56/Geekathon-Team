@@ -3,15 +3,21 @@ import { getActiveTabURL  } from "./utils.js";
 const addNewBookmark = (bookmarkElement, bookmark) => {
     const bookmarkTitleElement = document.createElement("div");
     const newBookMarkElement = document.createElement("div");
+    const controlsElement = document.createElement("div");
 
     bookmarkTitleElement.textContent = bookmark.desc;
     bookmarkTitleElement.className = "bookmark-title";
+
+    controlsElement.className = "bookmark-controls";
 
     newBookMarkElement.id = "bookmark-" + bookmark.time;
     newBookMarkElement.className = "bookmark";
     newBookMarkElement.setAttribute("timestamp", bookmark.time);
 
+    setBookmarkAttributes("play", onPlay, controlsElement);
+
     newBookMarkElement.appendChild(bookmarkTitleElement);
+    newBookMarkElement.appendChild(controlsElement);
     bookmarkElement.appendChild(newBookMarkElement);
 };
 
@@ -29,6 +35,20 @@ const viewBookmarks = (currentBookmarks=[]) => {
     }
 };
 
+const onPlay = () => {
+
+};
+
+
+const setBookmarkAttributes = (src, eventListener, controlParentElement) => {
+    const controlElement = document.createElement("img");
+
+    controlElement.src = "assets/" + src + ".png";
+    controlElement.title = src;
+    controlElement.addEventListener("click", eventListener);
+    controlParentElement.appendChild(controlElement);
+};
+
 
 document.addEventListener("DOMContentLoaded", async () => {
     const activeTab = await getActiveTabURL();
@@ -40,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (activeTab.url.includes("youtube.com/watch") && currentVideo) {
         chrome.storage.sync.get([currentVideo], (data) => {
             const currentVideoBookmarks = data[currentVideo] ? JSON.parse(data[currentVideo]) : [];
-
+            console.log('view');
             viewBookmarks(currentVideoBookmarks);
         })
     } else {
