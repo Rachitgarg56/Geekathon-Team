@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/b/5b999d8MAYBE00000026_1.jpg"
+                alt="Primer" width="200px" height="200px">
+            <p>Primer</p>
+            <p><b>Amount: &#x20B9;371</b></p>
+            <button class="pay-button" onclick="initiatePayment(371)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/f/1fcf86cDRSHE00000048_1.jpg"
+                alt="Sunscreen" width="200px" height="200px">
+            <p>Sunscreen</p>
+            <p><b>Amount: &#x20B9;399</b></p>
+            <button class="pay-button" onclick="initiatePayment(399)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/4/04a1af76902395487432_1.jpg"
+                alt="Concealer" width="200px" height="200px">
+            <p>Concealer</p>
+            <p><b>Amount: &#x20B9;437</b></p>
+            <button class="pay-button" onclick="initiatePayment(437)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/3/536b7076902395718338_1.jpg"
+                alt="Foundation" width="200px" height="200px">
+            <p>Foundation</p>
+            <p><b>Amount: &#x20B9;389</b></p>
+            <button class="pay-button" onclick="initiatePayment(389)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/5/05e613041554538281_01.jpg"
+                alt="Highlighter" width="200px" height="200px">
+            <p>Highlighter</p>
+            <p><b>Amount: &#x20B9;607</b></p>
+            <button class="pay-button" onclick="initiatePayment(607)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/f/ff1ec448904330902107_1.jpg"
+                alt="Contour" width="200px" height="200px">
+            <p>Contour</p>
+            <p><b>Amount: &#x20B9;805</b></p>
+            <button class="pay-button" onclick="initiatePayment(805)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/d/1df1652PIXIX00000122_1.jpg"
+                alt="Blush" width="200px" height="200px">
+            <p>Blush</p>
+            <p><b>Amount: &#x20B9;1950</b></p>
+            <button class="pay-button" onclick="initiatePayment(1950)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/0/b093cbb8904245710583_1.jpg"
+                alt="Eyeshadow" width="200px" height="200px">
+            <p>Eyeshadow</p>
+            <p><b>Amount: &#x20B9;454</b></p>
+            <button class="pay-button" onclick="initiatePayment(454)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/7/97a2a1e6902395372868_1.jpg"
+                alt="Eyeliner" width="200px" height="200px">
+            <p>Eyeliner</p>
+            <p><b>Amount: &#x20B9;799</b></p>
+            <button class="pay-button" onclick="initiatePayment(799)">Pay Now</button>
+        </div>
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/9/591c564LOREA00000471_1n.jpg"
+                alt="Lipstick" width="200px" height="200px">
+            <p>Lipstick</p>
+            <p><b>Amount: &#x20B9;879</b></p>
+            <button class="pay-button" onclick="initiatePayment(879)">Pay Now</button>
+        </div>
+    </div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
