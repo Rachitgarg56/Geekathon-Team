@@ -7,11 +7,11 @@
 }
 
 body {
-    background: url("https://images.unsplash.com/photo-1627398362552-6a029c1f583c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: linear-gradient(rgba(53, 5, 5, 0.6),rgba(3, 24, 91, 0.723)), url("https://images.unsplash.com/photo-1617837270129-4bfc227e4b8e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     height: 100vh;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 #heading {
@@ -55,6 +55,27 @@ body {
     border: 2px solid #0079BF;
     border-radius: 5px;
     padding-left: 0.5rem;
+    resize: none;
+    overflow: hidden;
+}
+
+#add-board-btn {
+    background-color: #0079BF;
+    border: none;
+    padding: 0.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.note-des {
+    height: 50px;
+    width: 165px;
+    color: black;
+    border: 2px solid #0079BF;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    resize: none;
+    overflow: hidden;
 }
 
 #form {
@@ -66,7 +87,7 @@ body {
     background-color: #FFF;
 }
 
-#add-brd {
+.add-brd {
     background-color: #0079BF;
     border: none;
     padding: 0.5rem;
@@ -123,8 +144,14 @@ body {
 .add-cards {
     color: black;
     background-color: #0079BF;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
-    padding: 0.5rem;
+    padding: 1rem 1.5rem;
     font-weight: 600;
+    margin: 0.8rem auto;
+}
+
+.giveColor {
+    color: black;
+    border: 2px solid black;
 }
