@@ -1,4 +1,4 @@
-Razorpay Payment :
+Razorpay Payment : https://rachitgarg56.github.io/Geekathon-Team/Shakshi - Payment Integration/index.html
 
 This project is a simple web application for integrating Razorpay payment functionality into a web page. It consists of three main components:
 
