@@ -1,4 +1,4 @@
-# Project Link: [Team-3]()
+# Project Link: [Team-3](https://rachitgarg56.github.io/Geekathon-Team/Introduction/index.html)
 
 # Table Of Content :
 1. Rachit Garg [Chrome Extension](https://github.com/Rachitgarg56/Geekathon-Team/tree/main/Rachit_Garg-Chrome_Extension) --> [Demo Video]()
