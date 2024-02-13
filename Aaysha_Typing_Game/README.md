@@ -1,4 +1,5 @@
-Typing Game Project
+Typing Game Project 
+link: https://rachitgarg56.github.io/Geekathon-Team/Aaysha_Typing_Game/index.html
 
 Objective
 The primary objective of the Typing Game project was to create an engaging and user-friendly typing speed test application. Throughout the development process, I aimed to achieve the following goals:
