@@ -97,6 +97,7 @@ function addNewCards () {     //functionscalled above are made here
 }
 
 function addingNotes() {
+    console.log('clicked');
     clickAddNote.forEach(ele => {
         ele.addEventListener("click", (e) => {
             e.preventDefault();
