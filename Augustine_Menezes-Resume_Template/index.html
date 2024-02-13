@@ -5,9 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
+<div class="root">
+    <div class="navbar">
+        <img src="./assets/icons8-resume-100.png" alt="resumeImg">
+        <button id="twoResumeDownload">
+            <span class="material-symbols-outlined">
+                download
+            </span> 
+            <span>Download PDF</span>
+        </button>
+        <button id="minimalistDownload">
+            <span class="material-symbols-outlined">
+            download
+            </span> 
+            <span>Download PDF</span>
+        </button>
+    </div>
+    <div class="main_container">
+        <div class="input_container">
+            <div class="templateHeader">Template Type</div>
+            <span class="type">
+                <select id="resumeType">
+                    <option id="two_column">Two Column</option>
+                    <option id="minimalist">Minimalist</option>
+                </select>
+            </span>
     
-    <script src="script.js"></script>
+            <span class="header_background">
+                <div class="back_heading">Header Color</div>
+                <input type="color" id="backColor" value="#087CF7" />
+            </span>
+    
+            <span class="header_text">
+                <div class="text_heading">Text Color</div>
+                <input type="color" id="textColor" value="#0A0A0A" />
+                </span>
+    
+            <form id="personalDetails">
+                <div class="formHeading">Personal Details</div>
+                <input type="text" id="fname" name="fname" placeholder="Name">
+                <br>
+                <input type="email" id="email" name="email" placeholder="Email-ID">
+                <br>
+                <input type="tel" id="number" placeholder="Phone">
+                <br>
+                <input type="text" id="country" name="country" placeholder="Country">
+    
+                <div class="prof_details">Professional Details</div>
+                <input type="text" id="jobTitle" name="job" placeholder="Wanted Job Title"/>
+                <br>
+                <textarea id="summary" name="summary" rows="6" cols="25" placeholder="Professional Summary"></textarea>
+                <input type="text" id="skills" name="Skills" placeholder="Skills"/>
+            </form>
+    
+            <div class="employment_container">
+                <button id="addEmployment">Add Employment</button>
+                <div id="employForms"></div>
+            </div>
+    
+            <div class="project_container">
+                <button id="addProject">Add Project</button>
+                <div id="projectForms"></div>
+            </div>
+    
+            <div class="education_container">
+                <button id="addEducation">Add Education</button>
+                <div id="educationForms"></div>
+            </div>
+    
+            
+        </div>
+        <div class="two_container" id="two_container">
+            <div id="two_header">
+                <div class="two_name" id="twoName"></div>
+                <div class="two_job" id="twoJob"></div>
+            </div>
+    
+            <div class="columns">
+                <div class="twoLeft">
+                    <div id="twoSkillsSection">
+                        <div class="twoSkillsHeading">Skills</div>
+                        <div id="twoSkills"></div>
+                    </div>
+    
+                    <div id="twoContactSection">
+                    <div class="twoContactHeading">Contact</div>
+                    <div id="twoContactNumber">
+                        <span class="material-symbols-outlined">
+                            call
+                        </span>
+                        <span id="spanNum"></span>
+                    </div>
+                    <div id="twoContactEmail">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                        <span id="spanEmail"></span>
+                    </div>
+                    <div id="twoContactCountry">
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+                        <span id="spanLoc"></span>
+                    </div>
+                    </div>
+                </div>
+    
+                <div class="twoRight">
+                    <div class="twoSummarySection">
+                        <div class="twoSummaryHeading">Summary</div>
+                        <div id="twoSummary"></div>
+                    </div>
+                    <div class="employmentSection">
+                        <div class="employHeader">Professional Experience</div>
+                        <div id="employerList"></div>
+                    </div>
+                    <div class="projectSection">
+                        <div class="projectHeader">Projects</div>
+                        <div id="projectList"></div>
+                    </div>
+    
+                    <div class="qualificationSection">
+                        <div class="qualificationHeader">Qualifications</div>
+                        <div id="qualificationerList"></div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    
+        <div class="minimalist_container" id="minimalist_container">
+            <div id="minimalist_header">
+                <div class="miniLeft">
+                    <div class="minimalist_name" id="minimalistName"></div>
+                    <div class="minimalist_job" id="minimalistJob"></div>
+                </div>
+               <div class="miniRight" id="miniRight">
+                 <div id="miniContactNumber">
+                        <span class="material-symbols-outlined">
+                            call
+                        </span>
+                        <span id="miniSpanNum"></span>
+                    </div>
+                    <div id="miniContactEmail">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                        <span id="miniSpanEmail"></span>
+                    </div>
+                    <div id="miniContactCountry">
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+                        <span id="miniSpanLoc"></span>
+                    </div>
+               </div>
+            </div>
+            <div class="minimalist_details">
+                <div class="miniSummarySection">
+                    <div class="miniSummaryHeading">Summary</div>
+                    <div id="miniSummary"></div>
+                </div>
+                <div id="miniSkillsSection">
+                    <div class="miniSkillsHeading">Skills</div>
+                    <div id="miniSkills"></div>
+                </div>
+                <div class="miniEmploymentSection">
+                    <div class="miniEmployHeader">Professional Experience</div>
+                    <div id="miniEmployerList"></div>
+                </div>
+                <div class="miniProjectSection">
+                    <div class="miniProjectHeader">Projects</div>
+                    <div id="miniProjectList"></div>
+                </div>
+    
+                <div class="miniQualificationSection">
+                    <div class="miniQualificationHeader">Qualifications</div>
+                    <div id="miniQualificationerList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      
+<script src="script.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script>
 </body>
 </html>
