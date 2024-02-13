@@ -13,12 +13,14 @@ let noteDescrip;
 let deleteNote;
 let deleteBoard;
 
-addNote.addEventListener("click", ()=>{
+let giveColor;   //for fetching the each and every note, class  name is little irrelivant
+
+addNote.addEventListener("click", () => {
     anotherBox.style.display = "block";
     addNote.style.display = "none";
     makeBoard.style.height = "auto"
 })
-xColor.addEventListener("click", ()=>{
+xColor.addEventListener("click", () => {
     anotherBox.style.display = "none";
     addNote.style.display = "block";
     // makeBoard.style.height = "50px"
@@ -26,23 +28,24 @@ xColor.addEventListener("click", ()=>{
 // <!----------FOR CREATING BOARDS--------->
 addBoard.addEventListener("click", abc)
 
-function abc (e) {
+function abc(e) {
     e.preventDefault();
 
     //Get the input value from the 2nd click, which is Board-title
-    let data = form.children[0].value;     
-   
+    let data = form.children[0].value;
+
     form.children[0].value = "";
     anotherBox.style.display = "none";
     addNote.style.display = "block";
     // makeBoard.style.height = "50px"
-    if(data === "") {
+    if (data === "") {
         alert("ADD A TITLE FIRST")
     } else {
 
-    let boardContainer = document.createElement("div");   //boardContainer DIV WILL APPAND WITH ALLDATA div
-    boardContainer.classList.add("containerStyle");
-    boardContainer.innerHTML = `
+        let boardContainer = document.createElement("div");   //boardContainer DIV WILL APPAND WITH ALLDATA div
+        boardContainer.classList.add("containerStyle");
+        boardContainer.classList.add("container");
+        boardContainer.innerHTML = `
     <div class="board-head">
     <p class="title-name">${data}</p>
     <i class="fa-solid fa-trash delete-brd"></i></div>
@@ -50,7 +53,7 @@ function abc (e) {
 
     </div>
     <button class="add-cards">+ Add note</button>
-    <form class="show-hide"> 
+    <form class="show-hide container"> 
     <textarea class="note-des" placeholder="Write a note you want to add"></textarea>
                 <div id="most-inner-box">
                 <button class="add-brd">Add text</button>
@@ -58,126 +61,16 @@ function abc (e) {
                 </div>
     </form>
     `
-    allData.appendChild(boardContainer);
-    addCard = document.querySelectorAll(".add-cards")
-    // console.log(addCard);
-    cross = document.querySelectorAll(".cross");
-    // console.log(cross);
-    clickAddNote = document.querySelectorAll(".add-brd"); //Click Here to Show Note You Are Trying To Add
-    noteDescrip = document.querySelectorAll(".note-des");
-    // deleteBoard = document.querySelectorAll(".delete-brd");   //To delete one entire board
-
-
-    // deleteBoardFun();    
-
-    // addNewBoard()           //adding the new board to the screen
-    // addNewCards()           //adding the new cards to the indevidual board
-    // addingNotes()
+        allData.appendChild(boardContainer);
+        addCard = document.querySelectorAll(".add-cards")
+        // console.log(addCard);
+        cross = document.querySelectorAll(".cross");
+        // console.log(cross);
+        clickAddNote = document.querySelectorAll(".add-brd"); //Click Here to Show Note You Are Trying To Add
+        noteDescrip = document.querySelectorAll(".note-des");
+        // deleteBoard = document.querySelectorAll(".delete-brd");   //To delete one entire board
     }
 }
-
-
-// function addNewBoard () {    //function called above are made here
-//     addCard.forEach(element => {
-//         element.addEventListener("click", ()=>{
-//             // console.log(element.parentElement.children);
-//             element.parentElement.children[3].style.display = "block";
-//             element.style.display = "none";
-//         })
-//     });
-// }
-
-
-// function addNewCards () {     //functionscalled above are made here
-//     cross.forEach(ele => {
-//         ele.addEventListener("click", ()=>{
-//             // console.log(ele.parentNode.parentNode.parentElement)
-//             ele.parentElement.parentElement.style.display = "none";
-//             ele.parentNode.parentNode.parentElement.children[2].style.display = "block";
-//         })
-//     })
-// }
-// function addingNotes() {
-//     clickAddNote.forEach(ele => {
-//         ele.addEventListener("click", (e) => {
-//             e.preventDefault();
-//             let noteDescripElement = e.target.parentElement.previousElementSibling;
-//             console.log(noteDescripElement);
-//             let noteDescripValue = noteDescripElement.value;
-//             console.log('divtask added')
-//             // Hide the textarea
-//             // noteDescripElement.style.display = "none";
-//             // Create a div to display the note
-//             let noteBox = document.createElement("div");
-//             noteBox.innerHTML = `
-//             <button class="delete-note"><i class="fa-solid fa-delete-left"></i></button>
-//             <span>${noteDescripValue}</p>
-//             `
-//             noteBox.classList.add("giveColor")
-//             // noteBox.textContent = noteDescripValue;
-//             // noteBox.classList.add("note-box");
-//             // Append the note div to the board container
-//             e.target.parentElement.parentElement.parentElement.children[1].appendChild(noteBox);
-//             // console.log(ele.parentElement.parentElement.parentElement)
-//             // Hide the "Add note" button
-//             ele.parentElement.parentElement.style.display = "none";
-//             // console.log(ele.parentElement.parentElement.parentElement.children[1]);
-//             ele.parentElement.parentElement.parentElement.children[2].style.display = "block";
-//             ele.parentElement.parentElement.children[0].value = "";
-
-
-//             deleteNote = document.querySelectorAll(".delete-note");
-//             deleteEachNote();
-
-//             let containerStyle = document.querySelectorAll(".containerStyle")
-//             // console.log(containerStyle);
-//             containerStyle.forEach((ele) =>{
-//                 // console.log(ele.clientHeight);
-
-//                 if(ele.clientHeight > 420){
-//                     ele.style.height = "80vh";
-//                     ele.style.overflowY = "scroll";
-//                 }
-//             })
-
-//         });
-//     });
-// }
-
-
-// function deleteEachNote () {
-//     deleteNote.forEach((element)=>{
-//         // console.log(element);
-//         element.addEventListener("click", ()=>{
-//             element.parentElement.remove();
-//         }) 
-//         let containerStyle = document.querySelectorAll(".containerStyle")
-//         // console.log(containerStyle);
-//         containerStyle.forEach((ele) =>{
-//             // console.log(ele.clientHeight);
-    
-//             if (ele && ele.classList.contains("window")) {
-//                 // Check if the client height of the element is less than or equal to 419 pixels
-//                 if (ele.clientHeight <= 419) {
-//                     // Remove the "window" class
-//                     ele.style.height = "fit-content";
-//                     ele.style.overflowY = "hidden";                
-//                 }
-//             } 
-//         })
-
-//     })
-    
-// }
-
-// function deleteBoardFun() {
-//     deleteBoard.forEach((element)=>{
-//         element.addEventListener("click", ()=>{
-//             console.log(element.parentElement.parentElement);
-//             element.parentElement.parentElement.remove();
-//         })
-//     })
-// }
 
 
 allData.addEventListener("click", function (event) {
@@ -201,74 +94,91 @@ allData.addEventListener("click", function (event) {
     if (event.target.classList.contains("add-brd")) {
         event.preventDefault();
         // e.preventDefault();
-            let noteDescripElement = event.target.parentElement.previousElementSibling;
-            // console.log(noteDescripElement);
-            let noteDescripValue = noteDescripElement.value;
-            // console.log('divtask added')
-            // Hide the textarea
-            // noteDescripElement.style.display = "none";
-            // Create a div to display the note
-            let noteBox = document.createElement("div");
-            noteBox.innerHTML = `
+        let noteDescripElement = event.target.parentElement.previousElementSibling;
+        // console.log(noteDescripElement);
+        let noteDescripValue = noteDescripElement.value;
+        // console.log('divtask added')
+        // Hide the textarea
+        // noteDescripElement.style.display = "none";
+        // Create a div to display the note
+        let noteBox = document.createElement("div");
+        noteBox.innerHTML = `
             <button class="delete-note"><i class="fa-solid fa-delete-left"></i></button>
             <span>${noteDescripValue}</p>
             `
-            noteBox.classList.add("giveColor")
-            // noteBox.textContent = noteDescripValue;
-            // noteBox.classList.add("note-box");
-            // Append the note div to the board container
-            event.target.parentElement.parentElement.parentElement.children[1].appendChild(noteBox);
-            // console.log(ele.parentElement.parentElement.parentElement)
-            // Hide the "Add note" button
-            event.target.parentElement.parentElement.style.display = "none";
-            // console.log(ele.parentElement.parentElement.parentElement.children[1]);
-            event.target.parentElement.parentElement.parentElement.children[2].style.display = "block";
-            event.target.parentElement.parentElement.children[0].value = "";
+        noteBox.classList.add("giveColor")
+        noteBox.classList.add("draggable")
+        noteBox.setAttribute("draggable", "true");
+        // noteBox.classList.add("dragging");
+
+        // giveColor = document.querySelectorAll(".giveColor");
+        // noteBox.textContent = noteDescripValue;
+        // noteBox.classList.add("note-box");
+        // Append the note div to the board container
+        event.target.parentElement.parentElement.parentElement.children[1].appendChild(noteBox);
+        // console.log(ele.parentElement.parentElement.parentElement)
+        // Hide the "Add note" button
+        event.target.parentElement.parentElement.style.display = "none";
+        // console.log(ele.parentElement.parentElement.parentElement.children[1]);
+        event.target.parentElement.parentElement.parentElement.children[2].style.display = "block";
+        event.target.parentElement.parentElement.children[0].value = "";
 
 
-            // deleteNote = document.querySelectorAll(".delete-note");
-            // deleteEachNote();
-
-            let containerStyle = document.querySelectorAll(".containerStyle")
-            // console.log(containerStyle);
-            containerStyle.forEach((ele) =>{
-                // console.log(ele.clientHeight);
-
-                if(ele.clientHeight > 420){
-                    ele.style.height = "80vh";
-                    ele.style.overflowY = "scroll";
-                }
-            })
+        noteBox.addEventListener('dragstart', () => {
+            noteBox.classList.add('dragging');
+        });
+        noteBox.addEventListener('dragend', () => {
+            noteBox.classList.remove('dragging');
+        });
     }
 
 
     if (event.target.classList.contains("fa-delete-left")) {
-        
-            event.target.parentElement.parentElement.remove();
-        
-        let containerStyle = document.querySelectorAll(".containerStyle")
-        // console.log(containerStyle);
-        containerStyle.forEach((ele) =>{
-            console.log(ele.clientHeight);
-    
-            if (ele && ele.classList.contains("window")) {
-                // Check if the client height of the element is less than or equal to 419 pixels
-                if (ele.clientHeight == 452) {
-                    // Remove the "window" class
-                    ele.style.height = "fit-content";
-                    ele.style.overflowY = "hidden";                
-                }
-            } 
-        })
+
+        event.target.parentElement.parentElement.remove();
     };
 
-    // console.log(event.target);
-    if(event.target.classList.contains("delete-brd")) {
-        
-            // console.log(element.parentElement.parentElement);
-            event.target.parentElement.parentElement.remove();
+
+    if (event.target.classList.contains("delete-brd")) {
+        event.target.parentElement.parentElement.remove();
     }
 })
+
+
+
+
+let dragged;
+
+const dragStartHandler = (e) => {
+
+    if(e.target.classList.contains("draggable")){
+        console.log("dragging")
+        dragged = e.target;
+    }
+}
+
+const dropHandler = (e) => {
+    e.preventDefault();
+    // console.log("drop target",e.target)
+    if(e.target.classList.contains("all-note")){
+        // console.log("drop")
+        e.target.appendChild(dragged);
+    }
+}
+
+const dragOverHandler = (e) => {
+    e.preventDefault();
+}
+
+allData.addEventListener("dragstart",dragStartHandler);
+
+allData.addEventListener("drop",dropHandler);
+
+allData.addEventListener("dragover",dragOverHandler);
+
+
+
+
 
 
 
