@@ -1,6 +1,19 @@
+body {
+  background-color: lightgoldenrodyellow;
+}
+
 .container {
   width: 280px;
   color: #314d3e;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -22,6 +35,9 @@
 }
 
 .bookmarks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 5px 5px;
   padding: 3px;
 }
@@ -51,4 +67,19 @@
 .bookmark-controls {
   flex: auto;
   text-align: right;
+}
+
+
+
+.no-bookmarks-gif {
+  background-image: url('play.png');
+  width: 200px; 
+  height: 200px;
+  display: block;
+}
+
+
+.not-yt-page {
+  width: 200px;
+  height: 100px;
 }

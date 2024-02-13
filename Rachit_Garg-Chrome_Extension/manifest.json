@@ -1,5 +1,5 @@
 {
-    "name": "My YT Bookmarks",
+    "name": "YT-timestamps-Bookmarker",
     "version": "0.1.0",
     "description": "Saving timestamps in YT videos",
     "permissions": ["storage", "tabs"],
@@ -26,11 +26,11 @@
     ],
     "action": {
       "default_icon": {
-        "16": "assets/ext-icon.png",
-        "24": "assets/ext-icon.png",
-        "32": "assets/ext-icon.png"
+        "16": "assets/ext-icon-custom.png",
+        "24": "assets/ext-icon-custom.png",
+        "32": "assets/ext-icon-custom.png"
       },
-      "default_title": "My YT Bookmarks",
+      "default_title": "YT-timestamps-Bookmarker",
       "default_popup": "popup.html"
     },
     "manifest_version": 3
