@@ -32,7 +32,8 @@ const viewBookmarks = (currentBookmarks=[]) => {
             addNewBookmark(bookmarkElement, bookmark);
         }
     } else {
-        bookmarkElement.innerHTML = '<i class="row">No bookmarks to show</i>';
+        // bookmarkElement.innerHTML = '<i class="row">No bookmarks to show</i>';
+        bookmarkElement.innerHTML = '<img src="./assets/no-bookmarks.jpg" class="no-bookmarks-gif">No Bookmarks</img>';
     }
 };
 
@@ -86,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         })
     } else {
         const container = document.getElementsByClassName("container")[0];
-        container.innerHTML = '<div class="title">This is not a youtube video page.</div>';
+        container.innerHTML = '<div class="title">This is not a youtube video page.</div><img class="not-yt-page" src="./assets/no-yt-page.jpg"></img>';
     }
 });
 

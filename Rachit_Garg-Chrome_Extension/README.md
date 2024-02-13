@@ -18,6 +18,7 @@ To install the YT Timestamps Bookmarker Chrome Extension, follow these steps:
 3. Enable Developer mode using the toggle switch.
 4. Click on "Load unpacked" and select the directory where you cloned or downloaded the repository.
 5. The extension will now be installed and accessible from the Chrome toolbar.
+6. [Repository link](https://github.com/Rachitgarg56/Geekathon-Team/edit/main/Rachit_Garg-Chrome_Extension) 
 
 ## Usage
 
@@ -58,8 +59,9 @@ Special thanks to the following resources and contributors:
 - [Stack Overflow](https://stackoverflow.com/) community for invaluable support and guidance.
 
 ## UI IMAGES
-![Screenshot (353)](https://github.com/Rachitgarg56/Geekathon-Team/assets/112542259/e8915eb6-19c7-42e3-9046-24b9001890f9)
 
-![Screenshot (352)](https://github.com/Rachitgarg56/Geekathon-Team/assets/112542259/eea618be-71b9-4002-ac44-a617c8e0a883)
+![Screenshot (359)](https://github.com/Rachitgarg56/Geekathon-Team/assets/112542259/96e50bcf-d29c-459a-a989-39c15d94082f)
 
-![Screenshot (351)](https://github.com/Rachitgarg56/Geekathon-Team/assets/112542259/c9259a90-d6eb-4f26-ba50-fece1fdd5185)
+![Screenshot (357)](https://github.com/Rachitgarg56/Geekathon-Team/assets/112542259/78e655ce-0d99-424c-8c0f-5818e41b9f4a)
+
+![Screenshot (356)](https://github.com/Rachitgarg56/Geekathon-Team/assets/112542259/38e69a02-4d52-4f16-b9e9-bb9312fc9b36)
