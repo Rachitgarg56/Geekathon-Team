@@ -208,7 +208,7 @@ background-color: #087CF7;
     margin-bottom: 10px;
 }
 
-#miniSkills{
+#miniSkills,#twoSkills{
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
@@ -251,4 +251,8 @@ background-color: #087CF7;
 
 #minimalistDownload{
     display: none;
+}
+
+.projectLeft,.employLeft,.qualificationLeft{
+    width: 70%;
 }
