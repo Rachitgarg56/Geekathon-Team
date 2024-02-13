@@ -26,6 +26,7 @@ To install the YT Timestamps Bookmarker Chrome Extension, follow these steps:
 2. While watching the video, click on the bookmark button provided by the extension at the desired timestamp.
 3. To view or manage bookmarks, click on the extension icon in the Chrome toolbar.
 4. Bookmarks are synchronized across devices if Chrome sync is enabled.
+5. [Video Explanation](https://drive.google.com/file/d/1wff_9sNRvHWZoh_dLZoaHX2IYanLV3SI/view)
 
 ## Learnings
 
