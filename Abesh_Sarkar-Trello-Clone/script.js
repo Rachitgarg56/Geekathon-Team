@@ -6,6 +6,9 @@ const addBoard = document.querySelector("#add-board-btn");   //2nd click here, t
 const form = document.querySelector("#form");
 const allData = document.querySelector(".all-data");
 
+const alertBox = document.querySelector(".alert-box");
+
+
 let addCard;
 let cross;
 let clickAddNote;
@@ -39,7 +42,7 @@ function abc(e) {
     addNote.style.display = "block";
     // makeBoard.style.height = "50px"
     if (data === "") {
-        alert("ADD A TITLE FIRST")
+        alertBox.style.top = "1.5%";
     } else {
 
         let boardContainer = document.createElement("div");   //boardContainer DIV WILL APPAND WITH ALLDATA div
@@ -47,7 +50,7 @@ function abc(e) {
         boardContainer.classList.add("container");
         boardContainer.innerHTML = `
     <div class="board-head">
-    <p class="title-name">${data}</p>
+    <p class="get-title">${data}</p>
     <i class="fa-solid fa-trash delete-brd"></i></div>
     <div class='all-note'>
 
@@ -86,21 +89,18 @@ allData.addEventListener("click", function (event) {
         let crossBtn = event.target;
         let parentDiv = crossBtn.closest(".containerStyle");
         let noteForm = parentDiv.querySelector(".show-hide");
-        crossBtn.style.display = "none";
+        // crossBtn.style.display = "none";
         noteForm.style.display = "none";
         parentDiv.querySelector(".add-cards").style.display = "block";
     }
 
     if (event.target.classList.contains("add-brd")) {
         event.preventDefault();
-        // e.preventDefault();
+      
         let noteDescripElement = event.target.parentElement.previousElementSibling;
-        // console.log(noteDescripElement);
+       
         let noteDescripValue = noteDescripElement.value;
-        // console.log('divtask added')
-        // Hide the textarea
-        // noteDescripElement.style.display = "none";
-        // Create a div to display the note
+        
         let noteBox = document.createElement("div");
         noteBox.innerHTML = `
             <button class="delete-note"><i class="fa-solid fa-delete-left"></i></button>
@@ -109,17 +109,11 @@ allData.addEventListener("click", function (event) {
         noteBox.classList.add("giveColor")
         noteBox.classList.add("draggable")
         noteBox.setAttribute("draggable", "true");
-        // noteBox.classList.add("dragging");
 
-        // giveColor = document.querySelectorAll(".giveColor");
-        // noteBox.textContent = noteDescripValue;
-        // noteBox.classList.add("note-box");
-        // Append the note div to the board container
         event.target.parentElement.parentElement.parentElement.children[1].appendChild(noteBox);
-        // console.log(ele.parentElement.parentElement.parentElement)
-        // Hide the "Add note" button
+        
         event.target.parentElement.parentElement.style.display = "none";
-        // console.log(ele.parentElement.parentElement.parentElement.children[1]);
+       
         event.target.parentElement.parentElement.parentElement.children[2].style.display = "block";
         event.target.parentElement.parentElement.children[0].value = "";
 
@@ -150,7 +144,6 @@ allData.addEventListener("click", function (event) {
 let dragged;
 
 const dragStartHandler = (e) => {
-
     if(e.target.classList.contains("draggable")){
         console.log("dragging")
         dragged = e.target;
@@ -159,7 +152,6 @@ const dragStartHandler = (e) => {
 
 const dropHandler = (e) => {
     e.preventDefault();
-    // console.log("drop target",e.target)
     if(e.target.classList.contains("all-note")){
         // console.log("drop")
         e.target.appendChild(dragged);
@@ -178,7 +170,12 @@ allData.addEventListener("dragover",dragOverHandler);
 
 
 
-
+window.addEventListener("click", (e)=>{
+    console.log(e);
+    if(!e.target.classList.contains("alert-box") && e.target.id !== "add-board-btn"){
+        alertBox.style.top = "-50rem";
+    }
+})
 
 
 

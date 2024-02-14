@@ -13,6 +13,7 @@ body {
     width: 100%;
     opacity: 0.9;
     overflow-y: hidden;
+    /* overflow-x: scroll; */
 }
 
 #heading {
@@ -30,6 +31,11 @@ body {
     border-radius: 10px;
     overflow-y: hidden;
     border: none;
+    overflow-x: scroll;
+}
+
+#make-board::-webkit-scrollbar {
+    width: 0;
 }
 
 #make-board p {
@@ -132,9 +138,9 @@ body {
     /* scrollbar-width: none; */
 }
 
-/* .all-data::-webkit-scrollbar {
+.all-data::-webkit-scrollbar {
     width: 0;
-} */
+}
 
 .show-hide {
     display: none;
@@ -153,6 +159,10 @@ body {
     overflow-y: auto;
     overflow-y: scroll;
     max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
     /* scrollbar-width: 0px; */
 }
 
@@ -236,3 +246,37 @@ body {
     /* border: 1px solid black; */
     cursor: move;
   }
+
+
+  .alert-box {
+    gap: 1rem;
+    position: fixed;
+    top: -50rem;
+    left: 40%;
+    height: 6rem;
+    width: 20rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #111000;
+    background-color: #fffe;
+    font-weight: 700;
+    border-radius: 3%;
+    /* text-shadow: 2px 2px 5px black; */
+    box-shadow: 5px 5px 8px wheat;
+    /* display: none; */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    padding-top: .7rem;
+  }
+
+  /* .cross {
+    color: black;
+  } */
+
+  #alert-text {
+    columns: white;
+    font-size: 1.5rem;
+  }
+
